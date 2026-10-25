@@ -1,0 +1,2 @@
+# Preserve exact release-source and upstream-license byte hashes.
+* -text

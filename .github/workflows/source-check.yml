@@ -1,0 +1,28 @@
+name: Source and x86 build checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python dev.py audit
+      - run: python tools/check_publication.py
+      - run: python -m unittest discover -s tests
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python dev.py audit
+      - run: python dev.py build
+      - run: python dev.py test
+      - run: python dev.py build-debug
+      - run: python dev.py package
+      - run: python tools/check_package.py out/releases/AriaWide-v26-release.zip --dll out/build/d3d9.dll

@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/TsudaKageyu/minhook",
+  "commit": "8af6b4acae5a9388fd742b56fa79ece89d96f823",
+  "files": {
+    "include/MinHook.h": "d5cf8db333895134398c7f69bac43f232835fda1cccbd86875c654cd69989b23",
+    "src/buffer.c": "e6ec0912f8b017f4d3108d5a50ec972dd4f6991edb9aae5b5748c16f2713db64",
+    "src/buffer.h": "175ec5496c020509cf4c7670322b51b5bcd5b63a345bfefc4a19b43675857fa7",
+    "src/hook.c": "c6eec4f8dc5fb6513347c3f44fbdb25ca0bba7a2bcbe141d238c7da97094cd9d",
+    "src/trampoline.c": "58ae2dcc65317983535963654bb10a4398dae4a90da08af1007ab1dcf0db82a9",
+    "src/trampoline.h": "c93c66f8db04561f3345835f1185451f61043c1549e33425d87af86448580379",
+    "src/hde/hde32.c": "2dd2e2ed9c76e65daa0c2f6023bc38dc80bc5c62448cfdc65a098be8339a8bde",
+    "src/hde/hde32.h": "754579fbcec5f64fa229646ceecb241c0b7f31c8a0bb12370e604c316c569315",
+    "src/hde/pstdint.h": "975488009779ea99c7e04b83a160397d5cd7195cb5bf6ad79180805f756c7d00",
+    "src/hde/table32.h": "1ad9f42b009e839457eb1d78e790f32903d6c66a5f64980da90c0843f9cf5951",
+    "LICENSE.txt": "4f21f857550d7be854da6ea5f2da4e6775ca4e3fbb535e4f3d961c47d0bf3335"
+  }
+}
