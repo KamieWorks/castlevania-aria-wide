@@ -616,13 +616,13 @@
     },
     {
       "path": "dev.py",
-      "bytes": 2675,
-      "sha256": "534306e93f64fd31aae8dea46b73ee2baeb72a5e3e4281147a7a7c610df9468f"
+      "bytes": 2930,
+      "sha256": "b10d333e21983b78d206810a2baec3a578e1f6f2bd1dbab7da714abf48418d62"
     },
     {
       "path": "docs/BUILDING.md",
-      "bytes": 1884,
-      "sha256": "e0fb67cca45fa8fe9115db7c79b3d5af15a7a8535363e4216fb7488d02821d37"
+      "bytes": 2165,
+      "sha256": "376dd3b79233576cc5323928ed2dbbcb5d79554a9680f149091b3d4f15fc25fb"
     },
     {
       "path": "docs/DEBUGGING.md",

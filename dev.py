@@ -35,7 +35,10 @@ def audit():
     print(json.dumps({'sourceFiles':len(index['files']),'vendorFiles':len(manifest['files']),'pythonFilesParsed':count,'passed':True}))
 
 def powershell(script,*args):
-    executable=shutil.which('powershell.exe') or shutil.which('pwsh')
+    # A PowerShell 7 parent can pass its module search path to Windows
+    # PowerShell 5.1, breaking module autoload (for example Get-FileHash).
+    # Prefer the available modern host; retain 5.1 for standalone installations.
+    executable=shutil.which('pwsh.exe') or shutil.which('pwsh') or shutil.which('powershell.exe')
     if not executable:raise RuntimeError('Windows PowerShell and MSVC x86 tools are required.')
     subprocess.run([executable,'-NoProfile','-ExecutionPolicy','Bypass','-File',str(ROOT/script),*map(str,args)],cwd=ROOT,check=True)
 

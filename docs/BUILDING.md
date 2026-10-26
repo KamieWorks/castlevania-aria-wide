@@ -4,6 +4,10 @@
 使用 Visual Studio Installer 安装 C++ 桌面开发工具；build.ps1 自动发现工具链。
 不需要游戏、ROM、Frida 或网络下载第三方 C 源码。
 
+dev.py 优先使用已安装的 PowerShell 7，未安装时回退到 Windows PowerShell。
+这避免在 PowerShell 7 的 CI 宿主下误启动 5.1，继承不兼容模块搜索路径后
+找不到 Get-FileHash 等工具函数。无需修改系统或全局 PowerShell 配置。
+
 ```powershell
 python dev.py audit
 python dev.py build
