@@ -18,10 +18,10 @@ v26 发行 DLL SHA-256：
 
 ## 获取和构建
 
-源码仓库：https://github.com/flyingsheepzx-png/castlevania-aria-wide
+源码仓库：https://github.com/KamieWorks/castlevania-aria-wide
 
 ```powershell
-git clone https://github.com/flyingsheepzx-png/castlevania-aria-wide.git
+git clone https://github.com/KamieWorks/castlevania-aria-wide.git
 Set-Location castlevania-aria-wide
 ```
 
