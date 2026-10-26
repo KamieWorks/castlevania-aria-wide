@@ -18,6 +18,13 @@ v26 发行 DLL SHA-256：
 
 ## 获取和构建
 
+源码仓库：https://github.com/flyingsheepzx-png/castlevania-aria-wide
+
+```powershell
+git clone https://github.com/flyingsheepzx-png/castlevania-aria-wide.git
+Set-Location castlevania-aria-wide
+```
+
 本仓库根目录就是 `DEV_ROOT`。下载源码 ZIP 或克隆后，无需作者的盘符、
 Steam 账号、NAS、Codex 技能或本地已安装的逆向工具。
 
