@@ -45,7 +45,7 @@ def powershell(script,*args):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action',choices=['audit','build','test','package','build-debug'])
-    parser.add_argument('--name',default='AriaWide-v26-release')
+    parser.add_argument('--name',default='AriaWide-v27-release')
     args=parser.parse_args()
     if args.action=='audit':audit()
     elif args.action=='build':powershell('aria-wide/build.ps1','-OutputDirectory',ROOT/'out/build')

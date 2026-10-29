@@ -5,6 +5,7 @@ def sha(data):return hashlib.sha256(data).hexdigest()
 def portable(name,data):
  text=data.decode('utf-8-sig');before=text
  if name.endswith('.py'):
+  text=text.replace("remote=list((pathlib.Path(os.environ['ProgramFiles(x86)'])/'Steam/userdata').glob('*/1552550/remote'));assert len(remote)==1;remote=remote[0]",'remote=profile_root()')
   text=re.sub(r"(?i)(remote)\s*=\s*pathlib.Path\(r?'[^']*[\\/]userdata[\\/]\d+[\\/]1552550[\\/]remote'\)",r'\1=profile_root()',text)
   if name=='debug-v2/harness.py':text=re.sub(r"EXE=pathlib.Path\(r?'[^']*game\.exe'\)",'EXE=game_exe()',text)
   if name=='debug-v2/audit-steam-install.py':text=re.sub(r"MANIFEST=pathlib.Path\(r?'[^']*\.manifest'\)",'MANIFEST=depot_manifest()',text)
@@ -35,7 +36,7 @@ def portable(name,data):
  return (text.encode('utf-8') if text!=before else data),text!=before
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--source-root',type=pathlib.Path,required=True);ap.add_argument('--destination',type=pathlib.Path,required=True);args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--source-root',type=pathlib.Path,required=True);ap.add_argument('--destination',type=pathlib.Path,required=True);ap.add_argument('--release',default='v27');ap.add_argument('--shipping-dll-sha256',default='07029ee837e1f0848bdcf7a63e39ece92945f1f82a2a83a333b443c525a6e3c6');args=ap.parse_args()
  root=args.source_root.resolve();dest=args.destination.resolve();assert not dest.exists() and (root/'aria-wide/src/realtime.cpp').is_file();dest.mkdir(parents=True)
  records=[];seen=set()
  def copy(source,target,transform=False):
@@ -55,6 +56,6 @@ def main():
    if source.is_file() and source.suffix in {'.cpp','.def','.ps1'}:
     relative=source.relative_to(folder).as_posix().removeprefix('src/');copy(source,'historical/checkpoints/'+folder.name+'/'+relative,True)
  tool=pathlib.Path(__file__).resolve();out=dest/'tools/export_public.py';out.parent.mkdir(exist_ok=True);shutil.copy2(tool,out)
- (dest/'source-index.json').write_text(json.dumps({'release':'v26','shippingDLLSHA256':'60f4f368cd8fc80480d963cdfb358d59db8b20574e3b78a8036195320ae5dd59','shippingSource':'aria-wide/src','files':records,'excluded':['game executables and ROM/resources','save data and user configuration','private captures and memory dumps','working Git history and machine configuration','generated binaries and downloaded tool distributions']},indent=2),encoding='utf-8')
+ (dest/'source-index.json').write_text(json.dumps({'release':args.release,'shippingDLLSHA256':args.shipping_dll_sha256,'shippingSource':'aria-wide/src','files':records,'excluded':['game executables and ROM/resources','save data and user configuration','private captures and memory dumps','working Git history and machine configuration','generated binaries and downloaded tool distributions']},indent=2),encoding='utf-8')
  print(json.dumps({'destination':str(dest),'sourceFiles':len(records),'adaptedFiles':sum(r['portableAdaptation'] for r in records),'bytes':sum(r['bytes'] for r in records)}))
 if __name__=='__main__':main()

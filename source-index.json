@@ -1,6 +1,6 @@
 {
-  "release": "v26",
-  "shippingDLLSHA256": "60f4f368cd8fc80480d963cdfb358d59db8b20574e3b78a8036195320ae5dd59",
+  "release": "v27",
+  "shippingDLLSHA256": "07029ee837e1f0848bdcf7a63e39ece92945f1f82a2a83a333b443c525a6e3c6",
   "shippingSource": "aria-wide/src",
   "files": [
     {
@@ -22,25 +22,25 @@
     {
       "path": "aria-wide/package.ps1",
       "origin": "aria-wide/package.ps1",
-      "sourceSHA256": "59eb6d7b05186ba89f32a8fc42de84330497dc15625b8c71f5a27732215f62aa",
-      "exportSHA256": "59eb6d7b05186ba89f32a8fc42de84330497dc15625b8c71f5a27732215f62aa",
+      "sourceSHA256": "4773e2eb90c6a75080b40e3eaa19e7a5167aa972acfbddbcfb4266b66d495439",
+      "exportSHA256": "4773e2eb90c6a75080b40e3eaa19e7a5167aa972acfbddbcfb4266b66d495439",
       "bytes": 2954,
       "portableAdaptation": false
     },
     {
       "path": "aria-wide/README.release.txt",
       "origin": "aria-wide/README.release.txt",
-      "sourceSHA256": "dfad2d24653b3b4c937b5ebba98cad055e94bfa9d0e8718544ae6d388b8492b0",
-      "exportSHA256": "dfad2d24653b3b4c937b5ebba98cad055e94bfa9d0e8718544ae6d388b8492b0",
-      "bytes": 6327,
+      "sourceSHA256": "9ee5546f5817113d4f233583aee7f91faa9d2915f4a6cf3818fcdfd1855407a9",
+      "exportSHA256": "9ee5546f5817113d4f233583aee7f91faa9d2915f4a6cf3818fcdfd1855407a9",
+      "bytes": 6420,
       "portableAdaptation": false
     },
     {
       "path": "aria-wide/README.zh-CN.md",
       "origin": "aria-wide/README.zh-CN.md",
-      "sourceSHA256": "5f1e504f9b000105c5f90c492c74b52e735942dee1fd9c89a80c27e73e97ac9b",
-      "exportSHA256": "5f1e504f9b000105c5f90c492c74b52e735942dee1fd9c89a80c27e73e97ac9b",
-      "bytes": 4975,
+      "sourceSHA256": "508430a306de3cc627b545e4d9ef9de1e429de1393019e7d2c79136d31d6672c",
+      "exportSHA256": "508430a306de3cc627b545e4d9ef9de1e429de1393019e7d2c79136d31d6672c",
+      "bytes": 5669,
       "portableAdaptation": false
     },
     {
@@ -54,16 +54,16 @@
     {
       "path": "aria-wide/VALIDATION.zh-CN.md",
       "origin": "aria-wide/VALIDATION.zh-CN.md",
-      "sourceSHA256": "75de20ae522afd88cad895409b29e73c3983ee4fd2da9f80865786b839e4b98e",
-      "exportSHA256": "75de20ae522afd88cad895409b29e73c3983ee4fd2da9f80865786b839e4b98e",
-      "bytes": 12335,
+      "sourceSHA256": "5dbfa9972f73adc7992a1ee064bb98f8338dbc8c4f98700f7fde10d7fb0c3a6c",
+      "exportSHA256": "5dbfa9972f73adc7992a1ee064bb98f8338dbc8c4f98700f7fde10d7fb0c3a6c",
+      "bytes": 14181,
       "portableAdaptation": false
     },
     {
       "path": "aria-wide/src/proxy.cpp",
       "origin": "aria-wide/src/proxy.cpp",
-      "sourceSHA256": "347f38ecbbbcf70feeca7962617844360c23de389e8ca85d17084842d54672dc",
-      "exportSHA256": "347f38ecbbbcf70feeca7962617844360c23de389e8ca85d17084842d54672dc",
+      "sourceSHA256": "b674f77f6d73844cddc0da6fbe6e80ad0cc70b9ff90cbeed9929b3ebe16ea2ae",
+      "exportSHA256": "b674f77f6d73844cddc0da6fbe6e80ad0cc70b9ff90cbeed9929b3ebe16ea2ae",
       "bytes": 1531,
       "portableAdaptation": false
     },
@@ -78,9 +78,9 @@
     {
       "path": "aria-wide/src/realtime.cpp",
       "origin": "aria-wide/src/realtime.cpp",
-      "sourceSHA256": "92fa69fc6f99b602951276f676c27e06a47788dcc65ed06f1b08cb50806c6435",
-      "exportSHA256": "92fa69fc6f99b602951276f676c27e06a47788dcc65ed06f1b08cb50806c6435",
-      "bytes": 36601,
+      "sourceSHA256": "5ed192f257400e851afcacfc86d35cb6f65737ee0b47364c4a9a8a8c7ca0d372",
+      "exportSHA256": "5ed192f257400e851afcacfc86d35cb6f65737ee0b47364c4a9a8a8c7ca0d372",
+      "bytes": 37329,
       "portableAdaptation": false
     },
     {
@@ -1274,6 +1274,30 @@
       "exportSHA256": "92fa69fc6f99b602951276f676c27e06a47788dcc65ed06f1b08cb50806c6435",
       "bytes": 36601,
       "portableAdaptation": false
+    },
+    {
+      "path": "debug-v2/check-julius-hud-v27.py",
+      "origin": "debug-v2/check-julius-hud-v27.py",
+      "sourceSHA256": "c2d5390cc93b867b9811e98a3c87291fbd492980b2dfab68be6916fa0449ed1c",
+      "exportSHA256": "64b4f76f425a8be130301984ff47624dd537603451c0844a04bf4e6887e2c60c",
+      "bytes": 7815,
+      "portableAdaptation": true
+    },
+    {
+      "path": "debug-v2/check-julius-japanese-v27.py",
+      "origin": "debug-v2/check-julius-japanese-v27.py",
+      "sourceSHA256": "d8e1092fc7d920bce878cb7c0aa3d482f4c5d5ec0e75efd59bcd8fc89c5856bb",
+      "exportSHA256": "d8e1092fc7d920bce878cb7c0aa3d482f4c5d5ec0e75efd59bcd8fc89c5856bb",
+      "bytes": 1668,
+      "portableAdaptation": false
+    },
+    {
+      "path": "debug-v2/inspect-julius-v27.py",
+      "origin": "debug-v2/inspect-julius-v27.py",
+      "sourceSHA256": "1c47772529a41e87fc1562698d39ae452434a88fe81f7ff982d7e288c127dd90",
+      "exportSHA256": "2b2265f0f0ac17849e53cfd093b7ea53d7a308605b43a3ff1452ba0adec0ccfb",
+      "bytes": 2722,
+      "portableAdaptation": true
     }
   ],
   "excluded": [

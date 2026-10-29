@@ -1,5 +1,5 @@
 param(
-    [string]$PackageName='AriaWide-v26-release',
+    [string]$PackageName='AriaWide-v27-release',
     [string]$OutputDirectory=(Join-Path $PSScriptRoot '../deliverables'),
     [string]$DllPath=(Join-Path $PSScriptRoot 'build/d3d9.dll'),
     [switch]$IncludeSource

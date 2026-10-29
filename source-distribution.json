@@ -1,5 +1,5 @@
 {
-  "baseline": "v26",
+  "baseline": "v27",
   "shippingCore": "aria-wide/src",
   "scope": "Authored shipping/historical source, development tools, build inputs and documentation; no game or private runtime data.",
   "manifestExcludesItself": true,
@@ -12,7 +12,7 @@
     {
       "path": ".github/workflows/source-check.yml",
       "bytes": 886,
-      "sha256": "cd29c7f780765689e176b10750018f464fcf404de39f4b77c882975993a7bf50"
+      "sha256": "0c30152d29619db8ede337a10194286e12b223acda430b956ae7aa675a10c10f"
     },
     {
       "path": ".gitignore",
@@ -36,8 +36,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3437,
-      "sha256": "000cedc54d7fc77914492713d0556988382b95d0ae1b0ca6bf79b99a7accc418"
+      "bytes": 3725,
+      "sha256": "0d4d0a6163dd10e549b84032960cdb4a06b82de4bb4776f06fabe04570af0d75"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -51,13 +51,13 @@
     },
     {
       "path": "aria-wide/README.release.txt",
-      "bytes": 6327,
-      "sha256": "dfad2d24653b3b4c937b5ebba98cad055e94bfa9d0e8718544ae6d388b8492b0"
+      "bytes": 6420,
+      "sha256": "9ee5546f5817113d4f233583aee7f91faa9d2915f4a6cf3818fcdfd1855407a9"
     },
     {
       "path": "aria-wide/README.zh-CN.md",
-      "bytes": 4975,
-      "sha256": "5f1e504f9b000105c5f90c492c74b52e735942dee1fd9c89a80c27e73e97ac9b"
+      "bytes": 5669,
+      "sha256": "508430a306de3cc627b545e4d9ef9de1e429de1393019e7d2c79136d31d6672c"
     },
     {
       "path": "aria-wide/THIRD-PARTY.md",
@@ -66,8 +66,8 @@
     },
     {
       "path": "aria-wide/VALIDATION.zh-CN.md",
-      "bytes": 12335,
-      "sha256": "75de20ae522afd88cad895409b29e73c3983ee4fd2da9f80865786b839e4b98e"
+      "bytes": 14181,
+      "sha256": "5dbfa9972f73adc7992a1ee064bb98f8338dbc8c4f98700f7fde10d7fb0c3a6c"
     },
     {
       "path": "aria-wide/build.ps1",
@@ -77,12 +77,12 @@
     {
       "path": "aria-wide/package.ps1",
       "bytes": 2954,
-      "sha256": "59eb6d7b05186ba89f32a8fc42de84330497dc15625b8c71f5a27732215f62aa"
+      "sha256": "4773e2eb90c6a75080b40e3eaa19e7a5167aa972acfbddbcfb4266b66d495439"
     },
     {
       "path": "aria-wide/src/proxy.cpp",
       "bytes": 1531,
-      "sha256": "347f38ecbbbcf70feeca7962617844360c23de389e8ca85d17084842d54672dc"
+      "sha256": "b674f77f6d73844cddc0da6fbe6e80ad0cc70b9ff90cbeed9929b3ebe16ea2ae"
     },
     {
       "path": "aria-wide/src/proxy.def",
@@ -91,8 +91,8 @@
     },
     {
       "path": "aria-wide/src/realtime.cpp",
-      "bytes": 36601,
-      "sha256": "92fa69fc6f99b602951276f676c27e06a47788dcc65ed06f1b08cb50806c6435"
+      "bytes": 37329,
+      "sha256": "5ed192f257400e851afcacfc86d35cb6f65737ee0b47364c4a9a8a8c7ca0d372"
     },
     {
       "path": "aria-wide/vendor/minhook/LICENSE.txt",
@@ -330,6 +330,16 @@
       "sha256": "437160c69d120071cd75efd71ddc850e20345137eab841e20e013b91255a807e"
     },
     {
+      "path": "debug-v2/check-julius-hud-v27.py",
+      "bytes": 7815,
+      "sha256": "64b4f76f425a8be130301984ff47624dd537603451c0844a04bf4e6887e2c60c"
+    },
+    {
+      "path": "debug-v2/check-julius-japanese-v27.py",
+      "bytes": 1668,
+      "sha256": "d8e1092fc7d920bce878cb7c0aa3d482f4c5d5ec0e75efd59bcd8fc89c5856bb"
+    },
+    {
       "path": "debug-v2/check-lifecycle.py",
       "bytes": 4171,
       "sha256": "ca0aaab60e3c8221fc3a9ce215d3a80a0011278f33d9bc0e9afe7536f4f064fd"
@@ -500,6 +510,11 @@
       "sha256": "4ce969f589380502ea1d903e4feaf5711b2f46b3520b74682aa48d542ece29de"
     },
     {
+      "path": "debug-v2/inspect-julius-v27.py",
+      "bytes": 2722,
+      "sha256": "2b2265f0f0ac17849e53cfd093b7ea53d7a308605b43a3ff1452ba0adec0ccfb"
+    },
+    {
       "path": "debug-v2/inspect-layer-art.py",
       "bytes": 1269,
       "sha256": "00b6a510a601733524a6d1c342f1216d498697a6b53fc38094b33dfb8cdcbda6"
@@ -617,12 +632,12 @@
     {
       "path": "dev.py",
       "bytes": 2930,
-      "sha256": "b10d333e21983b78d206810a2baec3a578e1f6f2bd1dbab7da714abf48418d62"
+      "sha256": "3788fd66a0727e0b6ad476720cfd328cfca136b3d40d3d6f96a38110c0c641d3"
     },
     {
       "path": "docs/BUILDING.md",
-      "bytes": 2165,
-      "sha256": "376dd3b79233576cc5323928ed2dbbcb5d79554a9680f149091b3d4f15fc25fb"
+      "bytes": 2155,
+      "sha256": "0feffaf9a2e57c81fe8ef3891bdc7231403541c1cfbf37fcf3de28058ac28f2f"
     },
     {
       "path": "docs/DEBUGGING.md",
@@ -636,8 +651,8 @@
     },
     {
       "path": "docs/RENDERING.md",
-      "bytes": 4781,
-      "sha256": "72f8b0279806610803e9111c81cffb3a69847711e82d39f3f7baa8d9d620211d"
+      "bytes": 5250,
+      "sha256": "58659a725328dc80c512490cbaa38c78e21285e6fb5542ef76866963ab923bca"
     },
     {
       "path": "docs/SOURCE_MAP.md",
@@ -646,8 +661,8 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 3028,
-      "sha256": "983a4d862e24e401b43c4a355333e6bd7ecc3a8e51e45847a380394ce64bc45d"
+      "bytes": 4593,
+      "sha256": "e3564be424f553a1f1b9de29b8a547a7ded23d23f723bbf5602cc2860497a806"
     },
     {
       "path": "historical/README.md",
@@ -911,8 +926,8 @@
     },
     {
       "path": "source-index.json",
-      "bytes": 57415,
-      "sha256": "aee38b30536c84ef6751b5c4e9d994181eb778b51d3f05666f1483294d6a8d13"
+      "bytes": 58493,
+      "sha256": "127d7b4fb99d6f8765a6e55c7585ceda9a2fc4e2aca8364aae13a35c830092ca"
     },
     {
       "path": "tests/test_publication.py",
@@ -946,13 +961,13 @@
     },
     {
       "path": "tools/export_public.py",
-      "bytes": 5462,
-      "sha256": "5819a781088d1b722e85fa7cdfecfc8461e7f0ec3dbaeafd36ad4f468c12c61c"
+      "bytes": 5775,
+      "sha256": "910d69a3213a08d176e16d41519598de32802902d0684cebf23b974b6d416f11"
     },
     {
       "path": "tools/update_manifest.py",
       "bytes": 927,
-      "sha256": "4262fc419f74812fdf06586950e0bf133045785bdc7db05bafc477a6e67a87d1"
+      "sha256": "96075e5b85a5eb95299175b0e74c6f8559bde35f9f348313a25e547fd0d6a7c8"
     }
   ]
 }

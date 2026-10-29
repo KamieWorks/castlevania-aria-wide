@@ -18,7 +18,7 @@ static BOOL CALLBACK initialize(PINIT_ONCE,PVOID,PVOID*){
     if(GetModuleFileNameW(nullptr,logPath,32768)){
         wchar_t* slash=wcsrchr(logPath,L'\\');if(slash){lstrcpyW(slash+1,L"aria-wide-test.log");
             HANDLE log=CreateFileW(logPath,FILE_APPEND_DATA,FILE_SHARE_READ,nullptr,OPEN_ALWAYS,0,nullptr);
-            if(log!=INVALID_HANDLE_VALUE){char line[128];DWORD written;int count=wsprintfA(line,"v26 install=%d pid=%lu\r\n",result,GetCurrentProcessId());WriteFile(log,line,count,&written,nullptr);CloseHandle(log);}
+            if(log!=INVALID_HANDLE_VALUE){char line[128];DWORD written;int count=wsprintfA(line,"v27 install=%d pid=%lu\r\n",result,GetCurrentProcessId());WriteFile(log,line,count,&written,nullptr);CloseHandle(log);}
         }
     }
     return TRUE;

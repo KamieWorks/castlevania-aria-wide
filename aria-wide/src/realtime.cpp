@@ -301,6 +301,18 @@ static bool hudNumber(U8* ppu,int index){
     // 5-pixel advances from (6,6). Do not move floating damage numbers.
     return a0==6&&(a1&~511)==0&&x>=6&&x<=26&&(x-6)%5==0&&(a2&0xfc00)==0x7000&&tile>=0x80&&tile<=0x89;
 }
+static bool hudLeftObject(U8* ppu,int index){
+    if(hudNumber(ppu,index))return true;
+    U16 a0=word(ppu,0x20000+index*8),a1=word(ppu,0x20002+index*8),a2=word(ppu,0x20004+index*8);
+    int palette=a2&0xfc00,tile=a2&1023;
+    // Julius draws the weapon and its frame as OBJ, independently of BG0.
+    // The large axe/cross start at (104,-4); small icons/frame at (112,4).
+    // Match native geometry, flags, palette and tiles, never an OAM index:
+    // actual projectiles and other world sprites must keep the world camera.
+    if(palette!=0x2000&&palette!=0x3000)return false;
+    if(a0==0xfc&&a1==0x9068)return tile==0x210||tile==0x290;
+    return a0==4&&a1==0x5070&&(tile==0x296||tile==0x2d4||tile==0x2d6);
+}
 static void hudText(U8* ppu,int y,U32* line){
     uintptr_t fn=image+0x433a0;
     __asm {
@@ -415,8 +427,8 @@ static void shifted(U8* live,U8* copy,int y,int shift,bool backgroundOnly=false)
         if(word(copy,0x20000+o*8)==0&&word(copy,0x20002+o*8)==0x1e0&&word(copy,0x20004+o*8)==0){
             word(copy,0x20000+o*8)=0x200;continue;
         }
-        bool digit=anchoredHud&&hudNumber(copy,o);
-        auto& a=word(copy,0x20002+o*8);a=(a&~511)|((a-shift-(digit?viewportLeft:0)+clouds.correction[o])&511);
+        bool leftHud=anchoredHud&&hudLeftObject(copy,o);
+        auto& a=word(copy,0x20002+o*8);a=(a&~511)|((a-shift-(leftHud?viewportLeft:0)+clouds.correction[o])&511);
     }
     for(int w=0;w<2;w++){
         auto& a=word(copy,0x22028+w*2);int oldLeft=a>>8,oldRight=a&255;
@@ -471,7 +483,7 @@ static void __fastcall scanHook(U8* ppu,int y){
         U16 flags=word(ppu,0x22048),savedX[128];bool moved[128]={};
         bool anchoredHud=hudLayout(ppu);
         for(int o=0;o<128;o++){
-            int dx=clouds.correction[o]-(anchoredHud&&hudNumber(ppu,o)?viewportLeft:0);if(!dx)continue;
+            int dx=clouds.correction[o]-(anchoredHud&&hudLeftObject(ppu,o)?viewportLeft:0);if(!dx)continue;
             moved[o]=true;savedX[o]=word(ppu,0x20002+o*8);
             word(ppu,0x20002+o*8)=(savedX[o]&~511)|((savedX[o]+dx)&511);
         }
